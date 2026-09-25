@@ -30,6 +30,7 @@ jobs:
           cp -R images dist/
           cp assets/site.js dist/assets/
           npm run build
+          sed -i "s|assets/site.css|assets/site.css?v=${GITHUB_SHA}|; s|assets/site.js|assets/site.js?v=${GITHUB_SHA}|" dist/index.html
           touch dist/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
