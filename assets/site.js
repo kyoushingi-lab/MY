@@ -3,7 +3,7 @@ const i18n = {
     nav:{home:"ホーム",about:"自己紹介",works:"実績一覧",contact:"お問い合わせ"},
     hero:{roles:"ゲームPM · 運営 · QA<br>グラフィックデザイナー · イベント企画",tagline:"効率と正確性を追求する<br>ゲーム運営と品質管理"},
     home:{
-      projectsTitle:"プロジェクト一覽",
+      projectsTitle:"プロジェクト一覧",
       projects:{
         ctw:{
           company:"2022–2023 CTW株式会社",
@@ -30,7 +30,8 @@ const i18n = {
       career:"職歴",
       job1:"八紘電機株式会社 入社",
       job2:"CTW株式会社 入社",
-      job3:"株式会社Yostar 入社（現職）"
+      job3:"株式会社Yostar 入社（現職）",
+      job3Period:"2023–現在"
     },
     works:{
       title:"実績一覧",
@@ -107,7 +108,8 @@ const i18n = {
       career:"Career",
       job1:"Joined Yahiro Electric Co., Ltd.",
       job2:"Joined CTW Inc.",
-      job3:"Joined Yostar Inc. (Current)"
+      job3:"Joined Yostar Inc. (Current)",
+      job3Period:"2023–Present"
     },
     works:{
       title:"Work Highlights",
@@ -184,7 +186,8 @@ const i18n = {
       career:"工作经历",
       job1:"加入 八纮电器株式会社",
       job2:"加入 CTW株式会社",
-      job3:"加入 株式会社Yostar（在职）"
+      job3:"加入 株式会社Yostar（在职）",
+      job3Period:"2023–至今"
     },
     works:{
       title:"工作成果一览",
