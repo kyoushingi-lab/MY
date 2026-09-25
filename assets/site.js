@@ -322,8 +322,24 @@ function showTab(tabId) {
   });
   closeMobileMenu();
   if (marqueeController) marqueeController.update();
+  initVisibleSwipers();
   if (aosReady && typeof window.AOS.refreshHard === 'function') window.AOS.refreshHard();
   requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'auto' }));
+}
+
+function initVisibleSwipers() {
+  if (!window.Swiper) return;
+  document.querySelectorAll('.tab-panel:not(.hidden) .swiper').forEach(container => {
+    if (container.swiper) return;
+    new window.Swiper(container, {
+      loop: true,
+      pagination: { el: container.querySelector('.swiper-pagination') },
+      navigation: {
+        nextEl: container.querySelector('.swiper-button-next'),
+        prevEl: container.querySelector('.swiper-button-prev')
+      }
+    });
+  });
 }
 
 function initMarquee() {
@@ -418,18 +434,7 @@ function initOptionalLibraries() {
     window.AOS.init();
     aosReady = true;
   }
-  if (window.Swiper) {
-    document.querySelectorAll('.swiper').forEach(container => {
-      new window.Swiper(container, {
-        loop: true,
-        pagination: { el: container.querySelector('.swiper-pagination') },
-        navigation: {
-          nextEl: container.querySelector('.swiper-button-next'),
-          prevEl: container.querySelector('.swiper-button-prev')
-        }
-      });
-    });
-  }
+  initVisibleSwipers();
   if (window.lucide && typeof window.lucide.createIcons === 'function') window.lucide.createIcons();
 }
 
