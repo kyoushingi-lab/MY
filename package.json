@@ -1,0 +1,11 @@
+{
+  "name": "my-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tailwindcss -c tailwind.config.cjs -i src/styles.css -o dist/assets/site.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}
