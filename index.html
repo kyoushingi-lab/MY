@@ -17,22 +17,22 @@
 
   <link href="assets/site.css" rel="stylesheet">
 </head>
-<body class="bg-white text-gray-800 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+<body class="creator-site bg-white text-gray-800 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
 
 <!-- Header -->
-<header class="fixed top-0 left-0 w-full z-50 nav-bg shadow-sm">
-  <nav class="max-w-6xl mx-auto flex justify-between items-center py-3 px-6">
-    <span class="font-bold text-indigo-600 dark:text-indigo-400">KYOU</span>
+<header class="site-header fixed top-0 left-0 w-full z-50 nav-bg shadow-sm">
+  <nav class="site-nav max-w-6xl mx-auto flex justify-between items-center py-3 px-6">
+    <span class="site-brand font-bold text-indigo-600 dark:text-indigo-400">KYOU</span>
 
     <!-- PC Tabs -->
-    <ul class="hidden md:flex space-x-6 text-sm font-medium">
+    <ul class="desktop-nav hidden md:flex space-x-6 text-sm font-medium">
       <li><button type="button" class="tab-link pb-1 border-b-2 border-transparent hover:border-indigo-400" data-tab="home" data-i18n="nav.home" aria-controls="tab-home">ホーム</button></li>
       <li><button type="button" class="tab-link pb-1 border-b-2 border-transparent hover:border-indigo-400" data-tab="about" data-i18n="nav.about" aria-controls="tab-about">自己紹介</button></li>
       <li><button type="button" class="tab-link pb-1 border-b-2 border-transparent hover:border-indigo-400" data-tab="works" data-i18n="nav.works" aria-controls="tab-works">実績一覧</button></li>
       <li><button type="button" class="tab-link pb-1 border-b-2 border-transparent hover:border-indigo-400" data-tab="contact" data-i18n="nav.contact" aria-controls="tab-contact">お問い合わせ</button></li>
     </ul>
 
-    <div class="flex items-center space-x-3">
+    <div class="nav-controls flex items-center space-x-3">
       <!-- 语言切换 -->
       <div class="lang-switch">
         <button class="lang-btn" data-lang="ja">JA</button>
@@ -59,13 +59,15 @@
   <!-- TAB: 首页 -->
   <div id="tab-home" class="tab-panel">
     <!-- Hero -->
-    <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center text-white animated-bg">
-      <div class="max-w-2xl" data-aos="fade-up">
-        <img src="images/MYMYMY.jpg" alt="profile"
-             class="w-40 h-40 rounded-lg border-4 border-white mx-auto mb-6 object-cover transition transform hover:scale-110 cursor-pointer" loading="eager" fetchpriority="high" decoding="async" width="160" height="160">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">KYOU</h1>
-        <p class="text-lg md:text-2xl mb-2 opacity-90 multiline-i18n" data-i18n="hero.roles">ゲームPM · 運営 · QA<br>グラフィックデザイナー · イベント企画</p>
-        <p class="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 multiline-i18n" data-i18n="hero.tagline">効率と正確性を追求する<br>ゲーム運営と品質管理</p>
+    <section id="hero" class="hero-stage">
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">KYOU</h1>
+          <p class="text-lg md:text-2xl mb-2 opacity-90 multiline-i18n" data-i18n="hero.roles">ゲームPM · 運営 · QA<br>グラフィックデザイナー · イベント企画</p>
+          <p class="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 multiline-i18n" data-i18n="hero.tagline">効率と正確性を追求する<br>ゲーム運営と品質管理</p>
+        </div>
+        <div class="hero-portrait"><img src="images/MYMYMY.jpg" alt="profile"
+             class="w-40 h-40 rounded-lg border-4 border-white mx-auto mb-6 object-cover transition transform hover:scale-110 cursor-pointer" loading="eager" fetchpriority="high" decoding="async" width="160" height="160"></div>
       </div>
     </section>
 
@@ -82,7 +84,7 @@
                  data-href-ja="https://g123.jp/news/kantai?lang=ja"
                  data-href-en="https://g123.jp/news/kantai?lang=en"
                  data-href-zh="https://g123.jp/news/kantai?lang=zh" target="_blank" rel="noopener noreferrer">
-                <img src="images/ctw_kantai.png" alt="" class="w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
+                <img src="images/ctw_kantai.png" alt="" class="game-poster w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
                 <div class="p-2 text-left">
                   <p class="project-title font-semibold text-gray-900 dark:text-gray-100" data-i18n="works.ctw.kantai">艦隊少女（サービス終了）</p>
                   <p class="text-[11px] text-gray-500 dark:text-gray-400 leading-tight" data-i18n="home.projects.ctw.company">2022–2023 CTW株式会社</p>
@@ -97,7 +99,7 @@
                  data-href-ja="https://g123.jp/game/yamato?lang=ja"
                  data-href-en="https://g123.jp/game/yamato?lang=en"
                  data-href-zh="https://g123.jp/game/yamato?lang=zh" target="_blank" rel="noopener noreferrer">
-                <img src="images/ctw_yamato.jpg" alt="" class="w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
+                <img src="images/ctw_yamato.jpg" alt="" class="game-poster w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
                 <div class="p-2 text-left">
                   <p class="project-title font-semibold text-gray-900 dark:text-gray-100" data-i18n="works.ctw.yamato">宇宙戦艦ヤマト 未来への航路</p>
                   <p class="text-[11px] text-gray-500 dark:text-gray-400 leading-tight" data-i18n="home.projects.ctw.company">2022–2023 CTW株式会社</p>
@@ -112,7 +114,7 @@
                  data-href-ja="https://g123.jp/game/ginei?lang=ja"
                  data-href-en="https://g123.jp/game/ginei?lang=en"
                  data-href-zh="https://g123.jp/game/ginei?lang=zh" target="_blank" rel="noopener noreferrer">
-                <img src="images/ctw_ginei.png" alt="" class="w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
+                <img src="images/ctw_ginei.png" alt="" class="game-poster w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
                 <div class="p-2 text-left">
                   <p class="project-title font-semibold text-gray-900 dark:text-gray-100" data-i18n="works.ctw.ginei">銀河英雄伝説 戦いの輪舞曲</p>
                   <p class="text-[11px] text-gray-500 dark:text-gray-400 leading-tight" data-i18n="home.projects.ctw.company">2022–2023 CTW株式会社</p>
@@ -127,7 +129,7 @@
                  data-href-ja="https://g123.jp/game/wixoss?lang=ja"
                  data-href-en="https://g123.jp/game/wixoss?lang=en"
                  data-href-zh="https://g123.jp/game/wixoss?lang=zh" target="_blank" rel="noopener noreferrer">
-                <img src="images/ctw_wixoss.png" alt="" class="w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
+                <img src="images/ctw_wixoss.png" alt="" class="game-poster w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
                 <div class="p-2 text-left">
                   <p class="project-title font-semibold text-gray-900 dark:text-gray-100" data-i18n="works.ctw.wixoss">ウィクロスマルチバース</p>
                   <p class="text-[11px] text-gray-500 dark:text-gray-400 leading-tight" data-i18n="home.projects.ctw.company">2022–2023 CTW株式会社</p>
@@ -142,7 +144,7 @@
                  data-href-ja="https://g123.jp/game/seirei?lang=ja"
                  data-href-en="https://g123.jp/game/seirei?lang=en"
                  data-href-zh="https://g123.jp/game/seirei?lang=zh" target="_blank" rel="noopener noreferrer">
-                <img src="images/ctw_seirei.png" alt="" class="w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
+                <img src="images/ctw_seirei.png" alt="" class="game-poster w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
                 <div class="p-2 text-left">
                   <p class="project-title font-semibold text-gray-900 dark:text-gray-100" data-i18n="works.ctw.seirei">精霊幻想記アナザーテイル</p>
                   <p class="text-[11px] text-gray-500 dark:text-gray-400 leading-tight" data-i18n="home.projects.ctw.company">2022–2023 CTW株式会社</p>
@@ -174,14 +176,14 @@
 
   <!-- TAB: 关于我 -->
   <div id="tab-about" class="tab-panel hidden pt-20">
-    <div class="space-y-16 max-w-6xl mx-auto py-12">
+    <div class="page-shell space-y-16 max-w-6xl mx-auto py-12">
 
       <!-- 自己紹介 -->
-      <section id="about" class="px-6 md:px-0" data-aos="fade-up">
+      <section id="about" class="px-6 md:px-0">
         <h2 class="section-title" data-i18n="about.title">自己紹介</h2>
 
-        <div class="grid md:grid-cols-3 gap-10 items-center mt-6">
-          <div class="md:col-span-1 text-center space-y-4">
+        <div class="about-layout grid md:grid-cols-3 gap-10 items-center mt-6">
+          <div class="about-profile md:col-span-1 text-center space-y-4">
             <img src="images/MYMYMY.jpg" alt="KYOU"
                  class="w-48 h-48 rounded-full mx-auto border-4 border-indigo-300 dark:border-indigo-500
                         object-cover transition transform hover:scale-110 cursor-pointer"
@@ -190,7 +192,7 @@
             <p class="text-sm text-gray-700 dark:text-gray-300 multiline-i18n" data-i18n="hero.roles">ゲームPM · 運営 · QA<br>グラフィックデザイナー · イベント企画</p>
           </div>
 
-          <div class="md:col-span-2 space-y-4 text-base leading-relaxed text-gray-700 dark:text-gray-300 mb-12">
+          <div class="about-copy md:col-span-2 space-y-4 text-base leading-relaxed text-gray-700 dark:text-gray-300 mb-12">
             <p data-i18n="about.p1">私はゲーム業界において、ゲーム全体のプロジェクトマネジメントを中心に、幅広い業務経験を積んでまいりました。</p>
             <p data-i18n="about.p2">全体計画の策定、進捗管理、課題解決やリソース管理を通じて、プロジェクトを円滑に推進してきました。</p>
             <p data-i18n="about.p3">また、開発チーム・デザインチーム・マーケティングチームなど多職種との連携を図り、KPI 分析を基にした改善策の立案・実行や、収益最大化に直結する運営企画を実施してきました。</p>
@@ -202,7 +204,7 @@
       </section>
        
       <!-- 学历・職歴 -->
-      <section class="px-6 md:px-0 edu-career-section" data-aos="fade-up">
+      <section class="px-6 md:px-0 edu-career-section">
         <!-- 学历 -->
         <h3 class="subsection-title mt-6" data-i18n="about.edu">学歴</h3>
         <div class="space-y-3 mt-2">
@@ -231,9 +233,9 @@
       </section>
 
       <!-- 使用ツール -->
-      <section id="tools" class="px-6 md:px-0" data-aos="fade-up">
+      <section id="tools" class="px-6 md:px-0">
         <h2 class="section-title" data-i18n="tools.title">使用ツール</h2>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center mt-6">
+        <div class="tools-grid grid grid-cols-2 md:grid-cols-5 gap-8 text-center mt-6">
           <div class="card-basic p-6 bg-white dark:bg-gray-800 rounded-xl">
             <i data-lucide="image" class="w-10 h-10 mx-auto mb-3 text-[#31A8FF]"></i>
             <p class="font-semibold">Photoshop</p>
@@ -262,14 +264,14 @@
       </section>
 
       <!-- 了解我：猫咪 + 旅行 -->
-      <section id="me-basic" class="px-6 md:px-0" data-aos="fade-up">
+      <section id="me-basic" class="px-6 md:px-0">
         <h2 class="section-title" data-i18n="me.title">私について</h2>
 
         <!-- 猫 -->
         <div class="mb-12 mt-4">
           <h3 class="subsection-title" data-i18n="me.cat.section">猫</h3>
 
-          <div class="grid md:grid-cols-2 gap-8 items-start mt-4">
+          <div class="cat-layout grid md:grid-cols-2 gap-8 items-start mt-4">
             <div class="swiper w-full h-80 rounded-lg card-basic">
               <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="images/cat1.jpg" alt="Nerine" class="w-full h-80 object-cover rounded-lg" loading="lazy" decoding="async"></div>
@@ -310,7 +312,7 @@
         </div>
 
         <!-- 旅行 -->
-        <div class="mb-12">
+        <div class="travel-section mb-12">
           <h3 class="subsection-title" data-i18n="me.travel.title">旅行</h3>
           <div class="mb-6">
             <div class="swiper w-full h-72 rounded-lg card-basic">
@@ -332,13 +334,13 @@
 
   <!-- TAB: 成果一览 -->
   <div id="tab-works" class="tab-panel hidden pt-20">
-    <div class="space-y-16 max-w-6xl mx-auto py-12">
+    <div class="page-shell space-y-16 max-w-6xl mx-auto py-12">
 
       <!-- 实绩 -->
-      <section id="works" class="px-6 md:px-0" data-aos="fade-up">
+      <section id="works" class="px-6 md:px-0">
         <h2 class="section-title" data-i18n="works.title">実績一覧</h2>
 
-        <div class="space-y-12 mt-4">
+        <div class="work-groups space-y-12 mt-4">
 
           <!-- 八紘電機 -->
           <div>
@@ -346,19 +348,19 @@
 
             <details class="mb-6" open>
               <summary class="cursor-pointer font-medium text-gray-800 dark:text-gray-200" data-i18n="works.role.gd">グラフィックデザイナー</summary>
-              <div class="grid md:grid-cols-3 gap-6 mt-4">
+              <div class="work-grid grid md:grid-cols-3 gap-6 mt-4">
                 <a href="#" class="pdf-link card-basic block p-4"
                    data-link-ja="https://drive.google.com/file/d/1aWW4SiwCUDK8FGguC-LIVNoTABj5q201/view?usp=drive_link"
                    data-link-en="https://drive.google.com/file/d/1aWW4SiwCUDK8FGguC-LIVNoTABj5q201/view?usp=drive_link"
                    data-link-zh="https://drive.google.com/file/d/1aWW4SiwCUDK8FGguC-LIVNoTABj5q201/view?usp=drive_link">
-                  <img src="images/yahiro_design1.png" alt="" class="w-full h-32 object-contain mb-3 rounded" loading="lazy" decoding="async">
+                  <img src="images/yahiro_design1.png" alt="" class="document-preview w-full h-32 object-contain mb-3 rounded" loading="lazy" decoding="async">
                   <p class="font-semibold text-center" data-i18n="works.yahiro.catalog">会社カタログ</p>
                 </a>
                 <a href="#" class="pdf-link card-basic block p-4"
                    data-link-ja="https://drive.google.com/file/d/1eYd87OIsM2YriO2sOBLkEI-Gc0UjgQQY/view?usp=drive_link"
                    data-link-en="https://drive.google.com/file/d/1eYd87OIsM2YriO2sOBLkEI-Gc0UjgQQY/view?usp=drive_link"
                    data-link-zh="https://drive.google.com/file/d/1eYd87OIsM2YriO2sOBLkEI-Gc0UjgQQY/view?usp=drive_link">
-                  <img src="images/yahiro_design2.png" alt="" class="w-full h-32 object-contain mb-3 rounded" loading="lazy" decoding="async">
+                  <img src="images/yahiro_design2.png" alt="" class="document-preview w-full h-32 object-contain mb-3 rounded" loading="lazy" decoding="async">
                   <p class="font-semibold text-center" data-i18n="works.yahiro.pamphlet">会社パンフレット</p>
                 </a>
               </div>
@@ -366,12 +368,12 @@
 
             <details class="mb-6" open>
               <summary class="cursor-pointer font-medium text-gray-800 dark:text-gray-200" data-i18n="works.role.ep">イベント企画</summary>
-              <div class="grid md:grid-cols-3 gap-6 mt-4">
+              <div class="work-grid grid md:grid-cols-3 gap-6 mt-4">
                 <a href="#" class="pdf-link card-basic block p-4"
                    data-link-ja="https://drive.google.com/file/d/105B7EzpLmAPlZHYhTZ3IOCx67rGuOO-H/view?usp=drive_link"
                    data-link-en="https://drive.google.com/file/d/1n8MVSPdsWKTOwMza81-0vFj3XnsPUL3_/view?usp=drive_link"
                    data-link-zh="https://drive.google.com/file/d/1fgDihuhetkbLAS6hPFTLXrlIyvK9GUBh/view?usp=drive_link">
-                  <img src="images/yahiro_event.png" alt="" class="w-full h-32 object-contain mb-3 rounded" loading="lazy" decoding="async">
+                  <img src="images/yahiro_event.png" alt="" class="document-preview w-full h-32 object-contain mb-3 rounded" loading="lazy" decoding="async">
                   <p class="font-semibold text-center" data-i18n="works.yahiro.case">会社制作事例</p>
                 </a>
               </div>
@@ -385,13 +387,13 @@
             <!-- ゲームプロジェクトマネージャー -->
             <details class="mb-6" open>
               <summary class="cursor-pointer font-medium text-gray-800 dark:text-gray-200" data-i18n="works.role.pm">ゲームプロジェクトマネージャー</summary>
-              <div class="grid md:grid-cols-3 gap-6 mt-4">
+              <div class="work-grid grid md:grid-cols-3 gap-6 mt-4">
                 <!-- 艦隊少女 -->
                 <a href="https://g123.jp/news/kantai?lang=ja" class="i18n-href card-basic block overflow-hidden"
                    data-href-ja="https://g123.jp/news/kantai?lang=ja"
                    data-href-en="https://g123.jp/news/kantai?lang=en"
                    data-href-zh="https://g123.jp/news/kantai?lang=zh" target="_blank" rel="noopener noreferrer">
-                  <img src="images/ctw_kantai.png" alt="" class="w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
+                  <img src="images/ctw_kantai.png" alt="" class="game-poster w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
                   <p class="text-center font-semibold p-2 bg-gray-50 dark:bg-gray-700" data-i18n="works.ctw.kantai">艦隊少女（サービス終了）</p>
                 </a>
                 <!-- 宇宙戦艦ヤマト 未来への航路 -->
@@ -399,7 +401,7 @@
                    data-href-ja="https://g123.jp/game/yamato?lang=ja"
                    data-href-en="https://g123.jp/game/yamato?lang=en"
                    data-href-zh="https://g123.jp/game/yamato?lang=zh" target="_blank" rel="noopener noreferrer">
-                  <img src="images/ctw_yamato.jpg" alt="" class="w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
+                  <img src="images/ctw_yamato.jpg" alt="" class="game-poster w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
                   <p class="text-center font-semibold p-2 bg-gray-50 dark:bg-gray-700" data-i18n="works.ctw.yamato">宇宙戦艦ヤマト 未来への航路</p>
                 </a>
                 <!-- 銀河英雄伝説 戦いの輪舞曲 -->
@@ -407,7 +409,7 @@
                    data-href-ja="https://g123.jp/game/ginei?lang=ja"
                    data-href-en="https://g123.jp/game/ginei?lang=en"
                    data-href-zh="https://g123.jp/game/ginei?lang=zh" target="_blank" rel="noopener noreferrer">
-                  <img src="images/ctw_ginei.png" alt="" class="w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
+                  <img src="images/ctw_ginei.png" alt="" class="game-poster w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
                   <p class="text-center font-semibold p-2 bg-gray-50 dark:bg-gray-700" data-i18n="works.ctw.ginei">銀河英雄伝説 戦いの輪舞曲</p>
                 </a>
                 <!-- ウィクロスマルチバース -->
@@ -415,7 +417,7 @@
                    data-href-ja="https://g123.jp/game/wixoss?lang=ja"
                    data-href-en="https://g123.jp/game/wixoss?lang=en"
                    data-href-zh="https://g123.jp/game/wixoss?lang=zh" target="_blank" rel="noopener noreferrer">
-                  <img src="images/ctw_wixoss.png" alt="" class="w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
+                  <img src="images/ctw_wixoss.png" alt="" class="game-poster w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
                   <p class="text-center font-semibold p-2 bg-gray-50 dark:bg-gray-700" data-i18n="works.ctw.wixoss">ウィクロスマルチバース</p>
                 </a>
                 <!-- 精霊幻想記アナザーテイル -->
@@ -423,7 +425,7 @@
                    data-href-ja="https://g123.jp/game/seirei?lang=ja"
                    data-href-en="https://g123.jp/game/seirei?lang=en"
                    data-href-zh="https://g123.jp/game/seirei?lang=zh" target="_blank" rel="noopener noreferrer">
-                  <img src="images/ctw_seirei.png" alt="" class="w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
+                  <img src="images/ctw_seirei.png" alt="" class="game-poster w-full object-cover rounded-t-[16px]" style="aspect-ratio:600/1138;" loading="lazy" decoding="async" width="600" height="1138">
                   <p class="text-center font-semibold p-2 bg-gray-50 dark:bg-gray-700" data-i18n="works.ctw.seirei">精霊幻想記アナザーテイル</p>
                 </a>
               </div>
@@ -432,19 +434,19 @@
             <!-- ゲーム運営 -->
             <details class="mb-6" open>
               <summary class="cursor-pointer font-medium text-gray-800 dark:text-gray-200" data-i18n="works.role.op">ゲーム運営</summary>
-              <div class="grid md:grid-cols-3 gap-6 mt-4">
+              <div class="work-grid grid md:grid-cols-3 gap-6 mt-4">
                 <a href="#" class="pdf-link card-basic block p-4"
                    data-link-ja="https://drive.google.com/file/d/1Gf_nrrbmCQT2N5nIlAf48qYRRYandxsW/view?usp=drive_link"
                    data-link-en="https://drive.google.com/file/d/11he4c7U9pXixkHvpzYWubbx9tGZEYvhi/view?usp=drive_link"
                    data-link-zh="https://drive.google.com/file/d/1eysFGq5zlpgJaWAlCxfzGA-XFToH3guQ/view?usp=drive_link">
-                  <img src="images/ctw_game1.png" alt="" class="w-full h-32 object-contain mb-3 rounded" loading="lazy" decoding="async" width="600" height="1138">
+                  <img src="images/ctw_game1.png" alt="" class="document-preview w-full h-32 object-contain mb-3 rounded" loading="lazy" decoding="async" width="600" height="1138">
                   <p class="font-semibold text-center" data-i18n="works.ctw.kpi">ギフト販売によるKPIの大幅な増加</p>
                 </a>
                 <a href="#" class="pdf-link card-basic block p-4"
                    data-link-ja="https://drive.google.com/file/d/1xv6WF43d-bgWQIg7iHVD2GaClt37v6He/view?usp=drive_link"
                    data-link-en="https://drive.google.com/file/d/1PdAU5H5puU5_5z88h1p-fJ9u0wRLuhBM/view?usp=drive_link"
                    data-link-zh="https://drive.google.com/file/d/12e5tAGpP7HwcAdG6BJvHa9M5vWRc7z9B/view?usp=drive_link">
-                  <img src="images/ctw_game2.png" alt="" class="w-full h-32 object-contain mb-3 rounded" loading="lazy" decoding="async" width="600" height="1138">
+                  <img src="images/ctw_game2.png" alt="" class="document-preview w-full h-32 object-contain mb-3 rounded" loading="lazy" decoding="async" width="600" height="1138">
                   <p class="font-semibold text-center" data-i18n="works.ctw.event">イベント企画と実行における成功事例</p>
                 </a>
               </div>
@@ -457,19 +459,19 @@
 
             <details class="mb-6" open>
               <summary class="cursor-pointer font-medium text-gray-800 dark:text-gray-200" data-i18n="works.role.qa">ゲームQA</summary>
-              <div class="grid md:grid-cols-3 gap-6 mt-4">
+              <div class="work-grid grid md:grid-cols-3 gap-6 mt-4">
                 <a href="#" class="pdf-link card-basic block p-4"
                    data-link-ja="https://docs.google.com/spreadsheets/d/19C02X-HV6lsJRzRN_Bu52m--RgqSJ8LLLgM6fZoFfWk/edit?usp=sharing"
                    data-link-en="https://docs.google.com/spreadsheets/d/19C02X-HV6lsJRzRN_Bu52m--RgqSJ8LLLgM6fZoFfWk/edit?usp=sharing"
                    data-link-zh="https://docs.google.com/spreadsheets/d/19C02X-HV6lsJRzRN_Bu52m--RgqSJ8LLLgM6fZoFfWk/edit?usp=sharing">
-                  <img src="images/a-qa.png" alt="" class="w-full h-32 object-contain mb-3 rounded" loading="lazy" decoding="async">
+                  <img src="images/a-qa.png" alt="" class="document-preview w-full h-32 object-contain mb-3 rounded" loading="lazy" decoding="async">
                   <p class="font-semibold text-center" data-i18n="works.yostar.qaCases">アズールレーン QAテストケース（中国語）</p>
                 </a>
                 <a href="#" class="pdf-link card-basic block p-4"
                    data-link-ja="https://kyoushingi-lab.github.io/Azurlane-damage-calc/"
                    data-link-en="https://kyoushingi-lab.github.io/Azurlane-damage-calc/"
                    data-link-zh="https://kyoushingi-lab.github.io/Azurlane-damage-calc/">
-                  <img src="images/a-calc.png" alt="" class="w-full h-32 object-contain mb-3 rounded" loading="lazy" decoding="async">
+                  <img src="images/a-calc.png" alt="" class="document-preview w-full h-32 object-contain mb-3 rounded" loading="lazy" decoding="async">
                   <p class="font-semibold text-center" data-i18n="works.yostar.calc">アズールレーン ダメージ計算機（中国語）</p>
                 </a>
               </div>
@@ -480,7 +482,7 @@
       </section>
 
       <!-- 作品展示（FLOWERS） -->
-      <section id="portfolio" class="px-6 md:px-0" data-aos="fade-up">
+      <section id="portfolio" class="px-6 md:px-0">
         <h2 class="section-title" data-i18n="portfolio.title">作品一覧</h2>
         <h3 class="subsection-title" data-i18n="portfolio.flowersTitle">PCゲーム『FLOWERS・四季』日中翻訳プロジェクト</h3>
 
@@ -490,7 +492,7 @@
              data-href-ja="https://drive.google.com/file/d/1qFWPrr3cwu3SY2jfY9LDBE6cK6Uw7OpX/view?usp=drive_link"
              data-href-en="https://drive.google.com/file/d/1C9Gti4wPzKjLVx6J7dIap_HG9BNLn08T/view?usp=drive_link"
              data-href-zh="https://drive.google.com/file/d/1U0fy3uZ3fnREzgYJOVg2KMJfbnSarsw-/view?usp=drive_link">
-            <img src="images/flowers-pdf-preview.png" class="w-full h-56 object-cover rounded-lg mb-3" alt="" loading="lazy" decoding="async">
+            <img src="images/flowers-pdf-preview.png" class="document-preview w-full h-56 object-cover rounded-lg mb-3" alt="" loading="lazy" decoding="async">
             <h4 class="font-semibold text-lg" data-i18n="portfolio.plan">FLOWERS ローカライズ企画書</h4>
             <p class="text-sm" data-i18n="portfolio.planDesc">プロジェクト背景と翻訳の方向性。</p>
           </a>
@@ -511,14 +513,14 @@
         <div class="grid md:grid-cols-2 gap-6 mb-6">
           <a href="https://store.steampowered.com/app/452440/Flowers_Le_volume_sur_printemps/" target="_blank" rel="noopener noreferrer"
              class="portfolio-card card-basic p-4">
-            <img src="https://cdn.akamai.steamstatic.com/steam/apps/452440/header.jpg" class="w-full h-56 object-cover rounded-lg mb-3" alt="" loading="lazy" decoding="async">
+            <img src="https://cdn.akamai.steamstatic.com/steam/apps/452440/header.jpg" class="steam-cover w-full h-56 object-cover rounded-lg mb-3" alt="" loading="lazy" decoding="async">
             <h4 class="font-semibold text-lg">Flowers -Le volume sur printemps-</h4>
             <p class="text-sm multiline-i18n" data-i18n="portfolio.flowers.spring">FLOWERS シリーズ第1作「春篇」。<br>進行管理、翻訳、校正および画像処理の統括を担当。</p>
           </a>
 
           <a href="https://store.steampowered.com/app/858940/Flowers_Le_volume_sur_ete/" target="_blank" rel="noopener noreferrer"
              class="portfolio-card card-basic p-4">
-            <img src="https://cdn.akamai.steamstatic.com/steam/apps/858940/header.jpg" class="w-full h-56 object-cover rounded-lg mb-3" alt="" loading="lazy" decoding="async">
+            <img src="https://cdn.akamai.steamstatic.com/steam/apps/858940/header.jpg" class="steam-cover w-full h-56 object-cover rounded-lg mb-3" alt="" loading="lazy" decoding="async">
             <h4 class="font-semibold text-lg">Flowers -Le volume sur été-</h4>
             <p class="text-sm multiline-i18n" data-i18n="portfolio.flowers.summer">FLOWERS シリーズ第2作「夏篇」。<br>進行管理、翻訳、校正および画像処理の統括を担当。</p>
           </a>
@@ -527,14 +529,14 @@
         <div class="grid md:grid-cols-2 gap-6">
           <a href="https://store.steampowered.com/app/1238730/Flowers_Le_volume_sur_automne/" target="_blank" rel="noopener noreferrer"
              class="portfolio-card card-basic p-4">
-            <img src="https://cdn.akamai.steamstatic.com/steam/apps/1238730/header.jpg" class="w-full h-56 object-cover rounded-lg mb-3" alt="" loading="lazy" decoding="async">
+            <img src="https://cdn.akamai.steamstatic.com/steam/apps/1238730/header.jpg" class="steam-cover w-full h-56 object-cover rounded-lg mb-3" alt="" loading="lazy" decoding="async">
             <h4 class="font-semibold text-lg">Flowers -Le volume sur automne-</h4>
             <p class="text-sm multiline-i18n" data-i18n="portfolio.flowers.autumn">FLOWERS シリーズ第3作「秋篇」。<br>進行管理、翻訳、校正および画像処理の統括を担当。</p>
           </a>
 
           <a href="https://store.steampowered.com/app/1921560/Flowers_Le_volume_sur_hiver/" target="_blank" rel="noopener noreferrer"
              class="portfolio-card card-basic p-4">
-            <img src="https://cdn.akamai.steamstatic.com/steam/apps/1921560/header.jpg" class="w-full h-56 object-cover rounded-lg mb-3" alt="" loading="lazy" decoding="async">
+            <img src="https://cdn.akamai.steamstatic.com/steam/apps/1921560/header.jpg" class="steam-cover w-full h-56 object-cover rounded-lg mb-3" alt="" loading="lazy" decoding="async">
             <h4 class="font-semibold text-lg">Flowers -Le volume sur hiver-</h4>
             <p class="text-sm multiline-i18n" data-i18n="portfolio.flowers.winter">FLOWERS シリーズ最終作「冬篇」。<br>進行管理、翻訳、校正および画像処理の統括を担当。</p>
           </a>
@@ -542,7 +544,7 @@
       </section>
 
       <!-- 应援 + 周边 -->
-      <section id="oshigoods" class="px-6 md:px-0" data-aos="fade-up">
+      <section id="oshigoods" class="px-6 md:px-0">
         <!-- 推し活 -->
         <div class="mb-12 mt-4">
           <h3 class="subsection-title" data-i18n="me.oshikatsu.title">推し活</h3>
@@ -562,13 +564,13 @@
             </a>
           </div>
 
-          <div class="grid md:grid-cols-4 gap-6 mt-6">
+          <div class="fan-grid grid md:grid-cols-4 gap-6 mt-6">
             <a href="https://drive.google.com/file/d/1SY2lzz5mwrWwvw--3Tq-qBQVU8PNlo79/view?usp=drive_link" class="i18n-href card-basic block p-4"
                target="_blank" rel="noopener noreferrer"
                data-href-ja="https://drive.google.com/file/d/1SY2lzz5mwrWwvw--3Tq-qBQVU8PNlo79/view?usp=drive_link"
                data-href-en="https://drive.google.com/file/d/1SY2lzz5mwrWwvw--3Tq-qBQVU8PNlo79/view?usp=drive_link"
                data-href-zh="https://drive.google.com/file/d/1SY2lzz5mwrWwvw--3Tq-qBQVU8PNlo79/view?usp=drive_link">
-              <img src="images/yuluna-fanletter1.png" alt="" class="w-full h-40 object-cover rounded-lg mb-3" loading="lazy" decoding="async">
+              <img src="images/yuluna-fanletter1.png" alt="" class="document-preview w-full h-40 object-cover rounded-lg mb-3" loading="lazy" decoding="async">
               <p class="text-center font-semibold" data-i18n="me.oshikatsu.fan1">Fanletter Book製作①</p>
             </a>
 
@@ -577,7 +579,7 @@
                data-href-ja="https://drive.google.com/file/d/1FGKPSPUshlQix_xMYRJ1xpGAPwc1PFPT/view?usp=drive_link"
                data-href-en="https://drive.google.com/file/d/1FGKPSPUshlQix_xMYRJ1xpGAPwc1PFPT/view?usp=drive_link"
                data-href-zh="https://drive.google.com/file/d/1FGKPSPUshlQix_xMYRJ1xpGAPwc1PFPT/view?usp=drive_link">
-              <img src="images/yuluna-fanletter2.png" alt="" class="w-full h-40 object-cover rounded-lg mb-3" loading="lazy" decoding="async">
+              <img src="images/yuluna-fanletter2.png" alt="" class="document-preview w-full h-40 object-cover rounded-lg mb-3" loading="lazy" decoding="async">
               <p class="text-center font-semibold" data-i18n="me.oshikatsu.fan2">Fanletter Book製作②</p>
             </a>
 
@@ -586,7 +588,7 @@
                data-href-ja="https://drive.google.com/file/d/1pBcU1ZO1jjiQHH7m8VZuFA8CamsKY-W0/view?usp=drive_link"
                data-href-en="https://drive.google.com/file/d/1pBcU1ZO1jjiQHH7m8VZuFA8CamsKY-W0/view?usp=drive_link"
                data-href-zh="https://drive.google.com/file/d/1pBcU1ZO1jjiQHH7m8VZuFA8CamsKY-W0/view?usp=drive_link">
-              <img src="images/yuluna-fanletter3.jpg" alt="" class="w-full h-40 object-cover rounded-lg mb-3" loading="lazy" decoding="async">
+              <img src="images/yuluna-fanletter3.jpg" alt="" class="document-preview w-full h-40 object-cover rounded-lg mb-3" loading="lazy" decoding="async">
               <p class="text-center font-semibold" data-i18n="me.oshikatsu.fan3">Fanletter Book製作③</p>
             </a>
 
@@ -595,21 +597,21 @@
                data-href-ja="https://drive.google.com/file/d/1T54Tz3e4GKz_7HExEyzVw93TY2d1uxq5/view?usp=drive_link"
                data-href-en="https://drive.google.com/file/d/1uW4CU0I3idM_fQtToLLljX44TUtr6tBe/view?usp=drive_link"
                data-href-zh="https://drive.google.com/file/d/138ssJdeefwNnDjyd9eEN-UiDRv77A5Va/view?usp=drive_link">
-              <img src="images/yuluna-event.png" alt="" class="w-full h-40 object-cover rounded-lg mb-3" loading="lazy" decoding="async">
+              <img src="images/yuluna-event.png" alt="" class="document-preview w-full h-40 object-cover rounded-lg mb-3" loading="lazy" decoding="async">
               <p class="text-center font-semibold" data-i18n="me.oshikatsu.event">応援イベント企画</p>
             </a>
           </div>
         </div>
 
         <!-- グッズ製作 -->
-        <div class="mb-12">
+        <div class="goods-section mb-12">
           <h3 class="subsection-title" data-i18n="me.goods.title">グッズ製作</h3>
           <a href="https://drive.google.com/file/d/1PpYqKWlk4ljAUkix-eo1FsOS3fWpCzQU/view?usp=drive_link" class="i18n-href card-basic block p-4"
              target="_blank" rel="noopener noreferrer"
              data-href-ja="https://drive.google.com/file/d/1PpYqKWlk4ljAUkix-eo1FsOS3fWpCzQU/view?usp=drive_link"
              data-href-en="https://drive.google.com/file/d/1PpYqKWlk4ljAUkix-eo1FsOS3fWpCzQU/view?usp=drive_link"
              data-href-zh="https://drive.google.com/file/d/1PpYqKWlk4ljAUkix-eo1FsOS3fWpCzQU/view?usp=drive_link">
-            <img src="images/Elysia-goods.png" alt="" class="w-full h-56 object-cover rounded-lg mb-3" loading="lazy" decoding="async">
+            <img src="images/Elysia-goods.png" alt="" class="document-preview w-full h-56 object-cover rounded-lg mb-3" loading="lazy" decoding="async">
             <p class="text-center font-semibold" data-i18n="me.goods.card">グッズ制作</p>
           </a>
         </div>
@@ -619,8 +621,8 @@
 
   <!-- TAB: 联系我 -->
   <div id="tab-contact" class="tab-panel hidden pt-20">
-    <div class="space-y-16 max-w-6xl mx-auto py-12">
-      <section id="contact" class="px-6 md:px-0" data-aos="fade-up">
+    <div class="page-shell space-y-16 max-w-6xl mx-auto py-12">
+      <section id="contact" class="px-6 md:px-0">
         <h2 class="section-title" data-i18n="contact.title">お問い合わせ</h2>
         <div class="space-y-4 text-sm leading-relaxed text-gray-700 dark:text-gray-300 mt-4">
           <div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:space-x-6 space-y-3 sm:space-y-0">
@@ -643,7 +645,7 @@
   <i data-lucide="arrow-up" class="w-5 h-5"></i>
 </button>
 
-<footer class="text-center py-6 mt-10 text-sm 
+<footer class="site-footer text-center py-6 mt-10 text-sm 
   bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200
   dark:from-indigo-800 dark:via-purple-800 dark:to-pink-800 
   text-gray-700 dark:text-gray-200 shadow-inner">
